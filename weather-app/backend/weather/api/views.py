@@ -39,7 +39,7 @@ class UserRegisterAPIView(GenericAPIView):
         else:
             password=generate_random_password()
 
-            send_password_email([email],password)
+            send_password_email([email],password,name)
 
         user = User.objects.create_user(
             username=name,

@@ -14,9 +14,9 @@ def generate_random_password(length=10):
 
 # send to user email address
 
-def send_password_email(email, password):
-    subject = 'Welcome to YourApp!'
-    message = f'Your password for the account {email[0]} is: {password}'
+def send_password_email(email, password,name):
+    subject = 'Welcome to weather app !'
+    message = f'Your password for the account with username  {name} is: {password}'
     from_email = settings.EMAIL_HOST_USER
-    recipient_list = ['admgamingkerala@gmail.com']
+    recipient_list = [email[0]]
     send_mail(subject, message, from_email, recipient_list)
