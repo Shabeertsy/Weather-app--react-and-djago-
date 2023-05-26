@@ -29,7 +29,7 @@ INSTALLED_APPS = [
 
     "api",
     "rest_framework",
-    "corsheaders",
+    'corsheaders',
     "rest_framework_simplejwt.token_blacklist",
 ]
 
@@ -91,8 +91,17 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
-    "corsheaders.middleware.CorsMiddleware",
+     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
 ]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:5173',
+    # add more allowed origins if needed
+]
+
+
 
 ROOT_URLCONF = "weather.urls"
 
@@ -162,3 +171,18 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ORIGIN_ALLOW_ALL = True
+
+
+
+# Email Backend
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# SMTP Email Configuration (Example using Gmail)
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'kuttypoocha144@gmail.com'  # Update with your Gmail email address
+EMAIL_HOST_PASSWORD = 'kioigrcwigmqaexn'  # Update with your Gmail email password
+EMAIL_USE_TLS = True
+
+# Additional Settings for Gmail SMTP
+DEFAULT_FROM_EMAIL = 'kuttypoocha144@gmail.com'  # Update with your Gmail email address

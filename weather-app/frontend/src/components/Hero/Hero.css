@@ -1,0 +1,46 @@
+.hero {
+    background-color: rgb(230, 223, 214);
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+.hero-inner {}
+
+.hero-container {
+    padding-top: 150px;
+    display: flex;
+}
+
+.hero-bottom-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-bottom-containers {
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+
+}
+
+
+.left-side {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side {
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-quotes {
+    margin-top: 10px;
+}
